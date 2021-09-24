@@ -1,0 +1,194 @@
+body {
+    background-color: #15191d;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    
+}
+body:before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0;
+
+}
+
+.main {
+    width: 35.73%;
+    height: 76vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    background-color: #222;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    /* width: 680px;
+    height: 700px; */
+    background:transparent;
+    border-radius: 30px;
+    border: 2px solid tomato;
+    background-color: #111517;
+    box-shadow: 0px 4px 8px 6px rgba(255, 30, 30, 0.29);
+    /* width 680px */
+    /* height 700px */
+}
+.main-cover {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.main-blur {
+    filter: blur(6px);
+}
+.main:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 36.76%;
+    height: 100%;
+    border: 1px solid tomato;
+    border-radius: none;
+    background: transparent;
+    box-shadow: 0px 4px 8px 6px rgba(255, 30, 30, 0.29);
+}
+.main:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 36.76%;
+    border: 2px solid tomato;
+    border-radius: none;
+    background: transparent;
+    box-shadow: 0px 4px 8px 6px rgba(255, 30, 30, 0.29);
+}
+.block {
+    width: 25.21%;
+    height: 25.21%;
+    /* width: 185px;
+    height: 185px; */
+    z-index: 100;
+    
+}
+.cross {
+    background: url(./img/close.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 100;
+}
+.null {
+    background: url(./img/exposure-zero_119167.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 75%;
+}
+.line {
+
+    position: absolute;
+    top: 15%;
+    height: 2%;
+    border-radius: 20px;
+    background-color: tomato;
+    box-shadow: 0px 4px 8px 6px rgba(255, 30, 30, 0.29);
+    animation: expand .6s linear;
+    z-index: 10000;
+}
+.winner {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 50%;
+    height: 50%;
+    top: 50%;
+    left: 50%;
+    border-radius: 20px;
+    transform: translate(-50%,-250%);
+    border: 2px solid tomato;
+    color: #fff;
+    text-align: center;
+    background-color: #15191d;
+    z-index: 10000;
+    transition: transform .3s linear;
+
+    /* width: 600px;
+    height: 400px; */
+}
+.anim {
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+.winner__title {
+    
+    /* left: 50%;
+    transform: translateX(-50%); */
+}
+.btn {
+    background: url(./img/icons8-restart-50.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: none;
+    outline: none;
+    width: 50px;
+    height: 50px;
+}
+.character {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    /* background: url(./img/characters/luffy.png); */
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+@keyframes expand {
+    from {
+        width: 0%;
+    } to {
+        width: 100%;
+    }
+}
+video {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: .6;
+}
+.video__main video{
+    height: 100%;
+}
+@media (max-width: 600px) {
+    .body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .main {
+        width: 280px;
+        height: 279px;
+    }
+    .winner {
+        width: 80%;
+    }
+    .winner__title {
+        font-size: 20px;
+    }
+    .character {
+        width: 150px;
+        height: 150px;
+    }
+    .video__main {
+        margin-top: 10px;
+    }
+  }
